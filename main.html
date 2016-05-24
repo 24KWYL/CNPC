@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<link rel="stylesheet" href="style/common.css" />
+<link rel="stylesheet" href="style/main.css" />
+<!--[if lte IE 8]>
+<style type="text/css">
+body {
+	background: #f8f8f8;
+}
+.description {
+	border: 1px solid #CCC;
+}
+.right_panel {
+	border: 1px solid #CCC;
+}
+</style>
+<![endif]-->
+<script>
+$(document).ready(function(e) {
+    $(".img_container").hide();
+    $(".img_container").eq(0).show();
+	interval = setInterval("nextPicture()", 5000);
+	$(".thumb_container li").mouseenter(function(e) {
+		var id = $(this).attr("id");
+		if(id != now_index) {
+			$(".thumb_container li.selected").removeClass("selected");
+			$(this).addClass("selected");
+			showPicture(id);
+			clearInterval(interval);
+			interval = setInterval("nextPicture()", 5000);
+		}
+	});
+});
+var interval;
+var now_index = 0;
+var pictureCount = 5;
+var fadeDuration = 1000;
+function showPicture(index) {
+	$(".img_container").eq(now_index).fadeOut(fadeDuration);
+	now_index = index;
+	$(".img_container").eq(now_index).fadeIn(fadeDuration);
+}
+function nextPicture() {
+	$(".img_container").eq(now_index++).fadeOut(fadeDuration);
+	if(now_index == pictureCount) {
+		now_index = 0;
+	}
+	$(".img_container").eq(now_index).fadeIn(fadeDuration);
+}
+</script>
+</head>
+
+<body>
+<div class="left_panel">
+  <div class="description">
+  <div class="flash_container">
+  	<div class="img_container" style="background-image: url(t_images/1.jpg);"></div>
+  	<div class="img_container" style="background-image: url(t_images/2.jpg);"></div>
+  	<div class="img_container" style="background-image: url(t_images/3.jpg);"></div>
+  	<div class="img_container" style="background-image: url(t_images/6.jpg);"></div>
+  	<div class="img_container" style="background-image: url(t_images/8.jpg);"></div>
+  	<ul class="thumb_container">
+    	<li id="0" class="selected"></li>
+    	<li id="1"></li>
+    	<li id="2"></li>
+    	<li id="3"></li>
+    	<li id="4"></li>
+    </ul>
+  </div>
+  	<p>&nbsp;&nbsp;&nbsp;&nbsp;在管理岩心实物资料的同时，除了抓好日常岩心管理和服务工作之外，还须不断引进新技术、探索新方法、开拓新途径，努力提高岩心管理和服务水平，增强岩心管理和服务的技术手段，网络岩心库的创建和投运是多年探索与实践的成果体现，是对岩心进行网络管理和网络化应用的有效途径。用户只要登录系统网站，就可轻松地管擦岩心、查询相关地址信息以及绘制各种综合柱状图，不仅丰富岩心管理和服务的科技内涵，且极大提高岩心资料的使用效率和应用价值。</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;岩心数字化网络发布平台及应用系统基于性能稳定的微软IIS网络信息服务器，采用先进的.Net开发技术，所有操作均在WEB服务器进行，对客户端之需要很低的配置要求。系统开发过程中采用了大量最新的开发技术，力求在功能和用户操作界面上更加商业化、智能化。</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;岩心是人们了解和认识地层地质的最直观、最真实的第一手资料，是油田最珍贵的资料和宝贵的资源，不论是在早期的地质勘探过程还是在后期的油田开发生产中，人们都要通过反复认真地管擦和研究岩心来研究和推断古地质运动、趁机演化、物性特征、成藏机理以及油藏特征、储量动用、开发效率、注水效果等情况。</p>
+  </div>
+</div>
+<div class="right_panel">
+	<span class="right_title">最近更新</span>
+  		<marquee direction="up" scrollamount="3">
+    	<script>
+    	for(var i = 1; i <= 100; i++) {
+			document.write("<div class='update'><span class='u_left'>井号" + i + "</span><span class='u_right'>2015-1-1</span></div>");
+		}
+    	</script>
+  		</marquee>
+</div>
+  <div class="footer" style="background: none; border: none;">
+    <div class="footer_right">
+    </div>
+  	<div class="copyright">Copyright © 2015 NEPU.All Rights Reserved.</div>
+  </div>
+</body>
+</html>

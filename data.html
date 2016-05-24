@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="style/common.css" />
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<script type="text/javascript" src="script/common.js"></script>
+</head>
+
+<body>
+  <div style="margin: 20px 0px; text-align: center;">
+  	<h3>添加记录</h3>
+    <style>
+	.add_panel {
+		width: 100%;
+		padding: 10px 5px;
+		border: 1px solid #D6CCCC;
+		background-color: #FFF;
+	}
+	</style>
+    <table class="add_panel" align="center">
+    	<tr>
+        <td>
+  			<div class="datafield"><span class="text">数据</span><input type="text" /></div>
+    	</td>
+    	<td>
+  			<div class="datafield"><span class="text">数据</span><input type="text" /></div>
+    	</td>
+    	<td>
+  			<div class="datafield" style="width: 280px;"><span class="text">数据</span>
+            <select id="selectmenu">
+				<option>Slower</option>
+				<option>Slow</option>
+				<option>Medium</option>
+				<option>Fast</option>
+				<option>Faster</option>
+			</select>
+            </div>
+    	</td>
+        <td>
+  			<div class="button"><img src="icons/039.png" /><input type="submit" value="查询" /></div>
+  			<div class="button"><img src="icons/039.png" /><input type="submit" value="添加" /></div>
+    	</td>
+    	</tr>
+    </table>
+  </div>
+  <table class="data_grid">
+    <tr>
+      <th>数据列1</th>
+      <th>数据列2</th>
+      <th>数据列3</th>
+      <th>数据列4</th>
+      <th>数据列5</th>
+    </tr>
+    <script>
+	for(var i = 1; i <= 20; i++) {
+		document.writeln("<tr>");
+		document.writeln("<td>" + i + "</td>");
+		document.writeln("<td>数据行" + i + "</td>");
+		document.writeln("<td>数据表行" + i + "</td>");
+		document.writeln("<td>数据表格行" + i + "</td>");
+		document.writeln("<td>数据表格横行" + i + "</td>");
+		document.writeln("</tr>");
+	}
+    </script>
+  </table>
+  <div class="footer">
+    <div class="footer_right"> <span class="page">共有39条,每页显示20条</span>
+      <ul class="pager">
+        <li><a class="page">«</a></li>
+        <li><a class="page">‹</a></li>
+        <li><a class="page now_page">1</a></li>
+        <li><a class="page">2</a></li>
+        <li><a class="page">›</a></li>
+        <li><a class="page">»</a></li>
+      </ul>
+    </div>
+  	<div class="copyright">Copyright © 2015 NEPU.All Rights Reserved.</div>
+  </div>
+<script>
+dropdownList($("#selectmenu"));
+</script>
+</body>
+</html>

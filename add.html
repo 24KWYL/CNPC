@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="style/common.css" />
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<script type="text/javascript" src="script/common.js"></script>
+</head>
+
+<body>
+  <form action="" method="post">
+  <div style="padding: 16px;">
+  	<h3>添加记录</h3>
+  	<table align="center">
+    	<tr>
+        	<td></td>
+        	<td width="80px"></td>
+        	<td></td>
+        </tr>
+  		<tr>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列1</span>
+        			<input type="text"/>
+    			</div>
+            </td>
+        	<td></td>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列2</span>
+        			<input type="text"/>
+    			</div>
+            </td>
+    	</tr>
+  		<tr>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列3</span>
+        			<input type="text"/>
+    			</div>
+            </td>
+        	<td></td>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列4</span>
+        			<input type="text"/>
+    			</div>
+            </td>
+    	</tr>
+  		<tr>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列5</span>
+                    <!-- select标签使用方法请看页面代码最底端的注释 -->
+    				<select id="selectmenu1" name="data5">
+        				<option>数据1</option>
+            			<option>数据2</option>
+            			<option>数据3</option>
+        			</select>
+    			</div>
+            </td>
+        	<td></td>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列6</span>
+        			<input type="text"/>
+    			</div>
+            </td>
+    	</tr>
+  		<tr>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列7</span>
+        			<input type="text"/>
+    			</div>
+            </td>
+        	<td></td>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列8</span>
+        			<input type="text"/>
+    			</div>
+            </td>
+    	</tr>
+  		<tr>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列9</span>
+        			<input type="text"/>
+    			</div>
+            </td>
+        	<td></td>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列10</span>
+                    <!-- select标签使用方法请看页面代码最底端的注释 -->
+    				<select id="selectmenu2" name="data10">
+        				<option>数据1</option>
+            			<option>数据2</option>
+            			<option>数据3</option>
+        			</select>
+    			</div>
+            </td>
+    	</tr>
+  		<tr>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列11</span>
+        			<input type="text"/>
+    			</div>
+            </td>
+        	<td></td>
+    		<td>
+    			<div class="datafield">
+    				<span class="text">数据列12</span>
+        			<input type="text"/>
+    			</div>
+            </td>
+    	</tr>
+  	</table>
+  
+  <div class="footer">
+    <div class="footer_right">
+        <div class="button"><img src="icons/274.png" /><input type="submit" value="返回" /></div>
+        <div class="button"><img src="icons/039.png" /><input type="submit" value="提交" /></div>
+    </div>
+  	<div class="copyright">Copyright © 2015 NEPU.All Rights Reserved.</div>
+  </div>
+  </form>
+<!--
+select标签的使用方法：
+与普通select标签的写法一样，只需要给需要样式的select标签加上一个id
+先在页面的<head>标签内引用script/common_footer.js
+然后在页面的最下方加上一个代码块<script>
+在这里调用dropdownList函数并将select标签当作参数传入
+这里使用jquery获得id为selectmenu1的标签
+-->
+<script>
+dropdownList($("#selectmenu1"));
+dropdownList($("#selectmenu2"));
+</script>
+</body>
+</html>

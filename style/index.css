@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0px;
+	font-family: 微软雅黑;
+	min-width: 1000px;
+}
+/* 顶部容器 */
+.top_panel {
+	position: fixed;
+	z-index: 9999;
+	top: 0px;
+	width: 100%;
+	height: 80px;
+	background-color: #FFF;
+	line-height: 80px;
+}
+.logo {
+	display: block;
+	float: left;
+	height: 50px;
+	width: 50px;
+	margin: 15px;
+}
+.title {
+	display: block;
+	float: left;
+	margin: 0px;
+}
+.top_right {
+	float: right;
+	padding-top: 20px;
+	padding-right: 20px;
+}
+.top_right a {
+	text-decoration: none;
+	color: #666;
+	transition: 0.3s;
+}
+.top_right a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+/* 上方导航条 */
+.nav_bar {
+	position: fixed;
+	z-index: 9998;
+	top: 80px;
+	width: 100%;
+	height: 40px;
+	background-color: #F44;
+	color: #FFF;
+	box-shadow: 0px 0px 5px #4D4848;
+}
+/* 导航条中间的按钮栏 */
+.right_tool {
+	line-height: 40px;
+	margin: 0px 0px 0px 310px;
+	padding: 0px;
+	font-weight: 600;
+}
+.right_tool li {
+	float: left;
+	list-style: none;
+	border-right: 1px solid #D33;
+	border-left: 1px solid #D33;
+	margin-right: -1px;
+	cursor: pointer;
+	transition: 0.2s;
+	-moz-transition: 0.2s;	/* Firefox 4 */
+	-webkit-transition: 0.2s;	/* Safari 和 Chrome */
+	-o-transition: 0.2s;	/* Opera */
+}
+.right_tool li:hover {
+	background-color: #F77;
+}
+.right_tool li a {
+	display: block;
+	height: 40px;
+	padding: 0px 20px;
+	text-decoration: none;
+}
+.right_tool li a:visited {
+	color: #FFF;
+}
+.right_tool li a span {
+	display: block;
+	float: left;
+	margin: 0px 3px;
+}
+/* 向下的箭头 */
+.icon_arrow_down {
+	position: relative;
+	top: 50%;
+	border: 4px solid transparent;
+	border-top-color: #FFF;
+	width: 0px;
+	height: 0px;
+}
+/* 导航条右边按钮的下拉菜单 */
+.right_tool li ul {
+	display: block;
+	position: absolute;
+	top: 40px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px; /* Old Firefox */
+	box-shadow: 0px 0px 8px #888;
+}
+.right_tool li ul li {
+	float: none;
+	border-left: none;
+	border-right: none;
+	margin: 0px;
+	border-top: 1px solid #CCC;
+}
+.right_tool li ul li:hover {
+	background-color: #f4f4f4;
+}
+.right_tool li ul li a {
+	text-align: center;
+	color: #333;
+}
+/* 导航条下方的主容器 */
+.main_container {
+	position: fixed;
+	top: 120px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+/* 主容器中左边的导航栏 */
+.left_bar {
+	position: fixed;
+	top: 120px;
+	left: 0px;
+	bottom: 0px;
+	width: 16%;
+	background-color: #696666;
+	color: #FFF;
+	font-size: 13px;
+	overflow: auto;
+	font-weight: 600;
+}
+/* 左侧导航栏中的大模块 */
+.function_title {
+	height: 40px;
+	line-height: 40px;
+	padding: 0px 10px 0px 20px;
+	background-color: #4D4848;
+	cursor: pointer;
+	transition: 0.2s;
+	-moz-transition: 0.2s;	/* Firefox 4 */
+	-webkit-transition: 0.2s;	/* Safari 和 Chrome */
+	-o-transition: 0.2s;	/* Opera */
+}
+.function_title:hover {
+	background-color: #5A5555;
+}
+.function_title span {
+	display: block;
+	float: left;
+	margin: 0px 4px;
+}
+/* 大模块中的功能 */
+.functions {
+	margin: 0px;
+	padding: 0px;
+}
+.functions li {
+	height: 40px;
+	cursor: pointer;
+	list-style: none;
+	transition: 0.2s;
+	-moz-transition: 0.2s;	/* Firefox 4 */
+	-webkit-transition: 0.2s;	/* Safari 和 Chrome */
+	-o-transition: 0.2s;	/* Opera */
+}
+.functions li a img {
+	display: block;
+	clear: both;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin: 10px 15px;
+	border: none;
+}
+.functions li a {
+	display: block;
+	height: 100%;
+	line-height: 40px;
+	color: #FFF;
+	text-decoration: none;
+}
+.functions li a:visited {
+	color: #FFF;
+}
+.functions li:hover {
+	background-color: #5A5555;
+}
+/* 主容器右侧的内容容器 */
+.right_panel {
+	position: absolute;
+	top: 0px;
+	left: 210px;
+	right: 0px;
+	bottom: 0px;
+	background: #f8f8f8;
+	overflow: hidden;
+}
+iframe {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 16%;
+	width: 84%;
+	height: 100%;
+	border: none;
+}

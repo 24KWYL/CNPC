@@ -1,0 +1,250 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<link rel="stylesheet" href="style/index.css" />
+<!--[if lte IE 8]>
+<style type="text/css">
+.right_tool li ul {
+	border: 1px solid #CCC;
+}
+</style>
+<![endif]-->
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".functions").hide();
+	$(".right_tool li ul").hide();
+	$(".right_tool li").mouseenter(function(e) {
+		$(this).children("ul").stop();
+        $(this).children("ul").slideDown(300);
+    });
+	$(".right_tool li").mouseleave(function(e) {
+		$(this).children("ul").stop();
+        $(this).children("ul").slideUp(300);
+    });
+	$(".function_title").click(function(e) {
+		$(this).parent().children("ul").stop();
+        $(this).parent().children("ul").slideToggle(300);
+    });
+});
+</script>
+</head>
+
+<body>
+	<div class="top_panel">
+    	<img src="images/logo.png" class="logo"/>
+        <h1 class="title">录井岩心扫描资料综合应用系统</h1>
+        <div class="top_right">
+        	<a href="">联系我们</a>
+            <span>|</span>
+        	<a href="">官方微博</a>
+            <span>|</span>
+        	<a href="">联系我们</a>
+        </div>
+    </div>
+	<div class="nav_bar">
+        <ul class="right_tool">
+           	<li>
+        		<a>
+           			<span>首页</span>
+           		</a>
+        	</li>
+           	<li>
+        		<a>
+           			<span>产品中心</span>
+          		</a>
+               	<ul>
+               		<li><a><span>常见问题</span></a></li>
+               		<li><a>未知错误</a></li>
+            	</ul>
+        	</li>
+           	<li>
+        		<a>
+           			<span>成功案例</span></span>
+           		</a>
+        	</li>
+           	<li>
+        		<a>
+           			<span>下载中心</span></span>
+           		</a>
+        	</li>
+           	<li>
+        		<a>
+           			<span>合作交流</span></span>
+           		</a>
+        	</li>
+        	<li>
+               	<a>
+           			<span style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">flykite</span>
+           		</a>
+               	<ul>
+               		<li><a>个人信息</a></li>
+               		<li><a>修改密码</a></li>
+               		<li><a>退出登录</a></li>
+            	</ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main_container">
+		<div class="left_bar">
+        	<div id="module1">
+        		<div class="function_title">
+                	<span class="icon_arrow_down"></span><span>管理系统</span>
+            	</div>
+                <ul class="functions">
+                	<li>
+                        <a href="main.html" target="right_frame">
+                        	<img src="icons/224.png" />
+                        	扫描资料数据管理
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="data.html" target="right_frame">
+                        	<img src="icons/228.png" />
+                        	扫描图像压缩上传
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="add.html" target="right_frame">
+                        	<img src="icons/040.png" />
+                            岩心图像网上验收
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="info.html" target="right_frame">
+                        	<img src="icons/063.png" />
+                            用户留言板
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="delete.html" target="right_frame">
+                        	<img src="icons/233.png" />
+                            用户留言板管理
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                        	<img src="icons/223.png" />
+                            系统日志
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<div id="module2">
+        		<div class="function_title">
+                	<span class="icon_arrow_down"></span><span>应用系统</span>
+            	</div>
+                <ul class="functions">
+                	<li>
+                    	<a href="" target="right_frame">
+                        	<img src="icons/235.png" />
+                            岩心图像电子相册
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                        	<img src="icons/235.png" />
+                            旋转井壁取心电子相册
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                        	<img src="icons/235.png" />
+                            典型图像电子相册
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                        	<img src="icons/293.png" />
+                            综合图发布浏览
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                        	<img src="icons/391.png" />
+                            附件上传
+                        </a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                        	<img src="icons/390.png" />
+                            附件下载
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<div id="module3">
+        		<div class="function_title">
+                	<span class="icon_arrow_down"></span><span>元数据维护系统</span>
+            	</div>
+                <ul class="functions">
+                	<li>
+                    	<a href="" target="right_frame">
+                    		<img src="icons/270.png" />
+                    		井别管理
+                    	</a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                    		<img src="icons/290.png" />
+                    		勘探项目管理
+                    	</a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                    		<img src="icons/380.png" />
+                    		用户管理
+                    	</a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                    		<img src="icons/379.png" />
+                    		权限管理
+                    	</a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                    		<img src="icons/365.png" />
+                    		可选井管理
+                    	</a>
+                    </li>
+                </ul>
+            </div>
+        	<div id="module4">
+        		<div class="function_title">
+                	<span class="icon_arrow_down"></span><span>帮助</span>
+            	</div>
+                <ul class="functions">
+                	<li>
+                    	<a href="" target="right_frame">
+                    		<img src="icons/105.png" />
+                    		安装程序下载
+                    	</a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                    		<img src="icons/139.png" />
+                    		帮助文件下载
+                    	</a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                    		<img src="icons/160.png" />
+                    		数据管理程序下载
+                    	</a>
+                    </li>
+                	<li>
+                    	<a href="" target="right_frame">
+                    		<img src="icons/060.png" />
+                    		Oracle客户端下载
+                    	</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <iframe name="right_frame" src="main.html" />
+    </div>
+</body>
+</html>
